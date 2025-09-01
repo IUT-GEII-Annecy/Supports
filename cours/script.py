@@ -13,7 +13,8 @@ hint_map = {
     "warning": "warning",
     "danger": "danger",
     "hint": "infor",
-    "question": "idee"
+    "question": "idee",
+    "attention": "cahierDesCharges"
 }
 
 # Regex pour détecter les callouts (hints)
@@ -258,7 +259,7 @@ def process_file_content(md_text, output_dir):
     md_text = process_links(md_text)    
     md_text = process_inline(md_text)
     md_text = process_titles(md_text)
-    md__text = process_horizontal_rules
+    md_text = process_horizontal_rules(md_text)
     md_text = escape_underscores(md_text)
     return md_text
 
