@@ -1,5 +1,5 @@
 ---
-title: TP 1 - Echauffement - suite
+title: TP 1 - Geométrie - Niveau 2
 description: Ce premier TP est une introduction à la programmation.
 date: 2025-08-31
 draft: false
