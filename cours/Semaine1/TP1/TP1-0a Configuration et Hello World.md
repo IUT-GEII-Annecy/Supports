@@ -22,7 +22,7 @@ weight: 101
 >   - [ ] Cliquez sur ce lien [submit.cs50.io](https://submit.cs50.io/invites/61a963c727374a32aa487ead18d908c5) et connectez votre compte GitHub
 >   - Ce site contiendra vos rendus et les retours des enseignants. 
 > - [ ] Lancez l'IDE
->   - [ ] Rendez-vous sur la page de [cs50](https://cs50.dev). 
+>   - [ ] Rendez-vous sur la page de [cs50.dev](https://cs50.dev). 
 >   - [ ] Cliquez sur `Log in`
 
 
