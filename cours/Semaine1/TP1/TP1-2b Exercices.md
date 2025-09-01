@@ -19,7 +19,7 @@ Tout le monde sait qu'une surface est toujours positive... Alors interdisons au 
 > 		ERREUR : Valeurs negatives interdites.
 > 		```
 > ---
-> **Checks : **
+> **Checks :**
 > ```bash
 > IUT-GEII-Annecy/exercices/2025/info1/tp1/2_geometrie/cercle/niveau2
 > IUT-GEII-Annecy/exercices/2025/info1/tp1/2_geometrie/rectangle/niveau2

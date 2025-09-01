@@ -64,7 +64,7 @@ cd tp1/0_hello
 Prêts ? Allons-y ! Nous allons écrire nos premières commandes dans le terminal ... 
 
 > [!todo] Premières commandes dans le terminal
-> [![asciicast](https://asciinema.org/a/qiLs8ysmvZjWn8MoMIZMel1wZ.svg)](https://asciinema.org/a/qiLs8ysmvZjWn8MoMIZMel1wZ)
+> ![asciicast](https://asciinema.org/a/qiLs8ysmvZjWn8MoMIZMel1wZ.svg)
 > - [ ] Télécharger les fichiers du tp1 : 
 > 	- [ ] Copier la commande suivante puis la coller la dans le terminal `Maj-INSER`. Appuyer sur Entrée
 > 	```bash

@@ -11,10 +11,10 @@ Nous allons à présent utiliser nos premières variables. Pour cela, commençon
 > - Le programme doit demander le nom de l'utilisateur avec le message de votre choix.
 > - Le programme doit afficher "Hello, \<nom\>" où \<nom\> est le nom entré par l'utilisateur.
 > 
-> ** Entrée : **  
+> **Entrée :**  
 > \<nom\> : Le nom de l'utilisateur
 > 
-> ** Sortie attendue : **
+> **Sortie attendue :**
 > ```bash
 > Hello, <nom>
 > ```

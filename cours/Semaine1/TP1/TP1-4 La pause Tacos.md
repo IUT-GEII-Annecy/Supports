@@ -39,7 +39,7 @@ C'est parti pour notre premier problème !
 
 
 > [!exemple] Exemple de sortie pour cet exercice
-> [![asciicast](https://asciinema.org/a/hD1h6Kxu9xtn1pfwgW2e7oetj.svg)](https://asciinema.org/a/hD1h6Kxu9xtn1pfwgW2e7oetj)
+> ![asciicast](https://asciinema.org/a/hD1h6Kxu9xtn1pfwgW2e7oetj.svg)
 
 > [!info]- Un peu d'aide ? 
 > - [ ] De quelles variables avez-vous besoin ? 
