@@ -13,8 +13,8 @@ Tout le monde sait qu'une surface est toujours positive... Alors interdisons au 
 
 > [!attention] Valeurs négatives interdites
 > - Même cahier des charges que précédemment sauf que :
-> - Après que l'utilisateur a rentré toutes les longueurs :
-> 	- Si l'utilisateur rentre une valeur négative, le programme répondra 
+> - Après que l'utilisateur a rentré **toutes les longueurs** :
+> 	- Si l'une ou l'autre des valeur est négative, le programme répondra 
 > 		```bash
 > 		ERREUR : Valeurs negatives interdites.
 > 		```
