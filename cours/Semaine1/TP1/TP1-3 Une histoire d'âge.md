@@ -15,7 +15,7 @@ Exerçons-nous avec quelques conditions simple
 > cd tp1/3_age
 > ```
 
-> [!warning] Cahier des charges - Age 
+> [!attention] Age
 > - [ ] Le programme demande quel age a l'utilisateur 
 > - [ ] Le programme répond alors selon la logique suivante :
 > 	- [ ] Si l'utilisateur a strictement moins de 12 ans : `Vous êtes un enfant.`

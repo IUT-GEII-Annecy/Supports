@@ -3,11 +3,11 @@ title: TP 1 - Variables
 description: Ce premier TP est une introduction à la programmation.
 date: 2025-08-31
 draft: false
-weight: 101
+weight: 103
 ---
-### Notre première variable 
+# Notre première variable 
 Nous allons à présent utiliser nos premières variables. Pour cela, commençons simplement avec l'exemple du cours et le cahier des charges suivant : 
-> [!attention] Cahier des charges  -- `iut-geii-annecy/exercices/2025/x/me`
+> [!attention] Première variable
 > - Le programme doit demander le nom de l'utilisateur avec le message de votre choix.
 > - Le programme doit afficher "Hello, \<nom\>" où \<nom\> est le nom entré par l'utilisateur.
 > 
@@ -22,6 +22,11 @@ Nous allons à présent utiliser nos premières variables. Pour cela, commençon
 > **Exemples de tests :**
 > **Entrée :** Alice        
 > **Sortie attendue :** `Hello, Alice`
+> ---
+> Check : 
+>   ```bash
+> 	check50 iut-geii-annecy/exercices/2025/info1/tp1/0_hello/variable
+> 	```
 
 Le cahier des charges mentionne la sortie attendue. **Votre programme doit ABSOLUMENT afficher la sortie attendue pour être correct.**
 

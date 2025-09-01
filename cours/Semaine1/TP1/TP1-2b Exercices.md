@@ -11,18 +11,20 @@ Si vous donnez des valeurs négatives en entrée des programmes précédents, il
 
 Tout le monde sait qu'une surface est toujours positive... Alors interdisons au programme de répondre n'importe quoi 
 
-> [!attention] Cahier des charges
+> [!attention] Valeurs négatives interdites
 > - Même cahier des charges que précédemment sauf que :
 > - Après que l'utilisateur a rentré toutes les longueurs :
 > 	- Si l'utilisateur rentre une valeur négative, le programme répondra 
 > 		```bash
-> 		ERREUR : Valeur negative interdite.
+> 		ERREUR : Valeurs negatives interdites.
 > 		```
 > ---
 > **Checks : **
->  Cercle uniquement : `IUT-GEII-Annecy/exercices/2025/info1/tp1/2_geometrie/cercle/niveau2`
-> Rectangle uniquement : `IUT-GEII-Annecy/exercices/2025/info1/tp1/2_geometrie/rectangle/niveau2`
-> L'exercie complet : ```IUT-GEII-Annecy/exercices/2025/info1/tp1/2_geometrie/geometrie/all```
+> ```bash
+> IUT-GEII-Annecy/exercices/2025/info1/tp1/2_geometrie/cercle/niveau2
+> IUT-GEII-Annecy/exercices/2025/info1/tp1/2_geometrie/rectangle/niveau2
+> IUT-GEII-Annecy/exercices/2025/info1/tp1/2_geometrie/geometrie/all
+> ```
 
 
 
@@ -32,4 +34,4 @@ Tout le monde sait qu'une surface est toujours positive... Alors interdisons au 
 > - [ ] Lorsque tout fonctionne : Utiliser Submit50 pour soumettre les deux programmes. 
 > ```bash
 > submit50 IUT-GEII-Annecy/exercices/2025/info1/tp1/2_geometrie/geometrie/all
-> ```
+> ``` 

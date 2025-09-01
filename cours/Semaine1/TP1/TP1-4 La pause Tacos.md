@@ -13,7 +13,7 @@ C'est parti pour notre premier problème !
 > Il reçoit un client, qui lui commande un certain nombre de tacos et de kebab. 
 > Il doit alors lui dire quel est le montant total de la commande 
 
-> [!warning] Cahier des charges - Pause Tacos - Niveau 1
+> [!attention] Pause Tacos - Niveau 1
 > Le programme Affiche d'abord une phrase de bienvenue 
 > ```bash
 > Bonjour, bienvenu chez <nom_du_tacos>
@@ -38,10 +38,10 @@ C'est parti pour notre premier problème !
 > ```
 
 
-> [!exemple]
+> [!exemple] Exemple de sortie pour cet exercice
 > [![asciicast](https://asciinema.org/a/hD1h6Kxu9xtn1pfwgW2e7oetj.svg)](https://asciinema.org/a/hD1h6Kxu9xtn1pfwgW2e7oetj)
 
-> [!todo]- Un peu d'aide ? 
+> [!info]- Un peu d'aide ? 
 > - [ ] De quelles variables avez-vous besoin ? 
 > 	- [ ] Lesquelles sont des entiers `int` ? 
 > 	- [ ] Lesquelles sont des nombres à virgule `float` ? 
@@ -50,7 +50,7 @@ C'est parti pour notre premier problème !
 ## Niveau 2 
 Même chose avec gestion des stocks
 
->[!warning] Cahier des charges - Pause Tacos - Niveau 2
+>[!attention] Pause Tacos - Niveau 2
 > - [ ] Même cahier des charges que le niveau 1 auquel s'ajoute :
 > - [ ] Le restaurant a un stock limité. 
 > 	- [ ] Après avoir demandé le nombre de tacos et de kebab :
@@ -77,7 +77,7 @@ Même chose avec gestion des stocks
 
 ## Bonus : Niveau 3
 
-> [!warning] Cahier des charges - Pause Tacos - Niveau 3
+> [!attention] Pause Tacos - Niveau 3
 > - [ ] Même cahier des charges que précédemment 
 > - [ ] Si le client commande plus de 5 articles au total, une réduction de 10% est appliquée sur le montant total de la commande 
 > - [ ] Les sorties attendues sont identiques aux cahiers des charges précédents
