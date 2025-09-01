@@ -1,5 +1,5 @@
 ---
-title: TP 1 - Variables
+title: TP 1 - Premières variables
 description: Ce premier TP est une introduction à la programmation.
 date: 2025-08-31
 draft: false
