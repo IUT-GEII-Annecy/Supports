@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "md2tex"
+version = "0.1.0"
+description = "Convertisseur Markdown → LaTeX avec callouts, tableaux, listes, code, images et asciinema"
+authors = [{ name = "Geoffrey Vaquette", email = "geoffrey.vaquette@univ-smb.fr" }]
+requires-python = ">=3.9"
+dependencies = []
+
+
+[project.scripts]
+md2tex = "md2tex.cli:main"
+
+[tool.setuptools]
+packages = ["md2tex"]

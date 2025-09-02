@@ -1,1 +1,44 @@
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+*.egg
+*.log
+
+# Virtual environments
+.venv/
+.env/
+*.env
+*.md2tex_env/
+
+# Build / distribution
+dist/
+build/
+.eggs/
+
+# --- VSCode / IDEs ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- Projet md2tex ---
+# Dossier LaTeX généré
 LaTeX/
+
+# Fichiers compilés LaTeX
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.pdf
+
+# --- Markdown ---
+# On garde les .md (source) dans le repo, donc pas d’exclusion générale
+# Si tu as des .md temporaires générés, ajoute-les ici :
+# *.gen.md
