@@ -37,8 +37,15 @@ def process_lists(md_text: str) -> str:
     lines = md_text.splitlines()
     output = []
     stack: list[tuple[str, int]] = []  # (type, indent)
+    in_codeblock = False
 
     for line in lines:
+        # Détection des délimiteurs de bloc de code
+        if line.strip().startswith("```"):
+            in_codeblock = not in_codeblock
+            output.append(line)
+            continue
+
         ltype, marker, indent, content = detect_list_type(line)
 
         if ltype:
@@ -56,10 +63,11 @@ def process_lists(md_text: str) -> str:
             output.append(f"{marker} {content}")
 
         else:
-            # Ligne normale → fermer toutes les listes ouvertes
-            while stack:
-                t, _ = stack.pop()
-                output.append("\\end{itemize}" if t == "ul" else "\\end{enumerate}")
+            if stack and not in_codeblock:
+                # Ligne normale hors code → on ferme les listes
+                while stack:
+                    t, _ = stack.pop()
+                    output.append("\\end{itemize}" if t == "ul" else "\\end{enumerate}")
             output.append(line)
 
     # Fermer ce qui reste ouvert

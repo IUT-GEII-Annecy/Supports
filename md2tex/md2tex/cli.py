@@ -5,6 +5,20 @@ from typing import Optional
 from .io_utils import create_root, read_text, write_text
 from .pipeline import process_file_content, generate_master_file
 
+import subprocess
+import shutil
+
+def auto_indent_tex(file_path: Path) -> None:
+    """Lance latexindent.pl sur le fichier .tex si disponible."""
+    exe = shutil.which("latexindent")
+    if exe:
+        try:
+            subprocess.run([exe, "-s", "-w", str(file_path)], check=True)
+            print(f"Auto-indent : {file_path}")
+        except subprocess.CalledProcessError as e:
+            print(f"⚠️ latexindent a échoué : {e}")
+    else:
+        print("⚠️ latexindent non trouvé (installe TeX Live ou MikTeX).")
 
 
 
@@ -14,6 +28,7 @@ def process_file(file_path: Path, output_dir: Path) -> Path:
     out = output_dir / (file_path.stem + ".tex")
     assert '\\\\item' not in latex, "Un \\ a été doublé quelque part."
     write_text(out, latex)
+    auto_indent_tex(out)
     print(f"Conversion terminée : {out}")
     return out
 

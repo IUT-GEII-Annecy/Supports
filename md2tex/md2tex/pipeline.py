@@ -26,8 +26,8 @@ def process_file_content(md_text: str, output_dir: Path) -> str:
     md_text = process_asciinema(md_text, output_dir)
     md_text = process_tables(md_text)
     md_text = process_images(md_text)
-    md_text = process_code_blocks(md_text)
     md_text = process_lists(md_text)
+    md_text = process_code_blocks(md_text)
     md_text = process_links(md_text)
     md_text = process_inline(md_text)
     md_text = process_titles(md_text)
@@ -47,3 +47,4 @@ def generate_master_file(output_dir: Path, master_file: str = "main.tex") -> Pat
             f.write(f"\\input{{{rel_path.as_posix()}}}\n")
     print(f"Fichier maître généré : {master_path}")
     return master_path
+
