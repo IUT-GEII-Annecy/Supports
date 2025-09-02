@@ -67,14 +67,47 @@ def escape_underscores(md_text):
         else:
             #escaped = part.replace('\n', r'\\n')   # d'abord les backslashes
             escaped = part.replace('_', r'\_')
+            escaped = part.replace('%',r'\%')
             escaped = escaped.replace('#', r'\#')
             escaped = escaped.replace('\<',r'<')
             escaped = escaped.replace('\>',r'>')
             escaped_parts.append(escaped)
     return ''.join(escaped_parts)
 
+def parse_table_block(block: str) -> str:
+    """Convertit un bloc de tableau Markdown en tableau LaTeX."""
+    lines = [l.strip() for l in block.strip().splitlines() if l.strip()]
+    if len(lines) < 2:
+        return block  # pas un tableau valide
 
-import re
+    headers = [h.strip() for h in lines[0].strip('|').split('|')]
+    ncols = len(headers)
+
+    # contenu
+    rows = []
+    for row in lines[2:]:  # on saute séparateur
+        cells = [c.strip() for c in row.strip('|').split('|')]
+        rows.append(" & ".join(cells) + r" \\")
+
+    latex = []
+    latex.append(r"\begin{tabular}{|" + "c|"*ncols + "}")
+    latex.append(r"\hline")
+    latex.append(" & ".join(headers) + r" \\")
+    latex.append(r"\hline")
+    latex.extend(rows)
+    latex.append(r"\hline")
+    latex.append(r"\end{tabular}")
+    return "\n".join(latex)
+
+
+def process_tables(md_text: str) -> str:
+    """Détecte les tableaux Markdown et les remplace par LaTeX."""
+    table_re = re.compile(
+        r'(?:^\|.+\|\s*\n^\|(?:\s*:?-+:?\s*\|)+\s*\n(?:^\|.+\|\s*\n?)+)',
+        re.MULTILINE
+    )
+    return table_re.sub(lambda m: parse_table_block(m.group(0)), md_text)
+
 
 def process_titles(md_text):
     # Séparer code/verbatim du reste
@@ -253,6 +286,7 @@ def process_file_content(md_text, output_dir):
     md_text = remove_header_footer(md_text)
     md_text = hint_re.sub(replace_hints, md_text)
     md_text = process_asciinema(md_text, output_dir)
+    md_text = process_tables(md_text)
     md_text = process_images(md_text)   
     md_text = process_code_blocks(md_text)
     md_text = process_lists(md_text)

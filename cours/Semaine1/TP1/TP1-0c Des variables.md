@@ -30,20 +30,20 @@ Nous allons à présent utiliser nos premières variables. Pour cela, commençon
 
 Le cahier des charges mentionne la sortie attendue. **Votre programme doit ABSOLUMENT afficher la sortie attendue pour être correct.**
 
-> [!todo] Modifier le programme pour demander le nom de l'utilisateur et l'afficher.    
-> 1. Inclure la bibliothèque `cs50.h` pour utiliser la fonction `get_string`. 
+> [!todo] Afficher le nom d'utilisateur
+> - [ ] Inclure la bibliothèque `cs50.h` pour utiliser la fonction `get_string`. 
 > 	```c
 > 	#include <cs50.h>
 > 	```
-> 2. Déclarer une variable de type `string` pour stocker le nom de l'utilisateur.  
+> - [ ] Déclarer une variable de type `string` pour stocker le nom de l'utilisateur.  
 > 	```c
 > 	string nom;
 > 	```
-> 3. Utiliser `get_string` pour obtenir le nom de l'utilisateur.  
+> - [ ] Utiliser `get_string` pour obtenir le nom de l'utilisateur.  
 > 	```c
 > 	nom = get_string("Entrez votre nom : ");
 > 	```
-> 4. Modifier `printf` pour afficher le message "Hello , [nom]!" où [nom] est le nom entré par l'utilisateur.
+> - [ ] Modifier `printf` pour afficher le message "Hello , [nom]!" où [nom] est le nom entré par l'utilisateur.
 
 
 

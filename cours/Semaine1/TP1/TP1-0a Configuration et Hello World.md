@@ -16,13 +16,18 @@ weight: 101
 
 > [!todo] Créer un compte GitHub
 > - [ ] Si vous n'avez pas encore de compte GitHub, créez-en un : 
->   - **Attention, ce compte vous sera utile dans votre vie professionnelle, choisissez votre pseudo avec soin !**
+>   - [ ] Nom d'utilisateur : `p-nom` avec p, la première lettre de votre prénom, puis votre nom.  
 >   - [ ] Utilisez votre **adresse email académique** pour créer votre compte sur [GitHub](https://github.com).
-> - [ ] Rejoignez le cours du semestre 1 : 
->   - [ ] Cliquez sur ce lien [submit.cs50.io](https://submit.cs50.io/invites/61a963c727374a32aa487ead18d908c5) et connectez votre compte GitHub
+> - [ ] Rejoignez le cours du semestre 1, cliquer sur le lien correspondant à votre groupe. 
+> | Groupe | Lien |
+> | --- | ---| 
+> | A   | [Groupe A](https://submit.cs50.io/invites/9a6f6de5408b4022baebeb336f409261) |
+> | B   | [Groupe B](https://submit.cs50.io/invites/f70e5bcd71c941a7acd2cbd7739218d8) | 
+> | C   | [Groupe C](https://submit.cs50.io/invites/88bf318c8b054f7a959ea7371f2b8011) |
+> | D   | [Groupe D](https://submit.cs50.io/invites/e58130b1d7874ca481da62a0795da120) |
 >   - Ce site contiendra vos rendus et les retours des enseignants. 
 > - [ ] Lancez l'IDE
->   - [ ] Rendez-vous sur la page de [cs50](https://cs50.dev). 
+>   - [ ] Rendez-vous sur la page de [cs50.dev](https://cs50.dev). 
 >   - [ ] Cliquez sur `Log in`
 
 

@@ -35,7 +35,7 @@ weight: 1
 L'interface de Scratch est divisée en plusieurs sections :
 - **Palette de blocs** : où vous trouverez les différents blocs de code que vous pouvez utiliser
     - **Mouvement** : pour déplacer les sprites
-    - **Apparence** : pour modifier l'apparence des sprites
+    - **Apparence** : pour modifier l'apparence des sprites -> Parler, changer de costume, etc. 
     - **Événements** : pour déclencher des actions
     - **Contrôle** : pour gérer le flux du programme
     - **Sons** : pour ajouter des effets sonores

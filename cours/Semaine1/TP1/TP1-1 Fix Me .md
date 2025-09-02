@@ -1,11 +1,11 @@
 ---
-title: TP 1 - Fixme
+title: TP 1 - Fixme ! 
 description: Ce premier TP est une introduction à la programmation.
 date: 2025-08-31
 draft: false
 weight: 110
 ---
-# Corrige le fichier
+#  Fix Me : Cherchez l'erreur 
 
 Oups ! Le fichier fixme.c contient plein d'erreurs qui rendent la compilation impossible. 
 A vous de les corriger ! 
