@@ -4,7 +4,7 @@ from pathlib import Path
 import urllib.request
 
 
-asciinema_re = re.compile(r"\[!\[asciicast\]\([^)]+\)\]\(https://asciinema\\.org/a/([A-Za-z0-9_-]+)\)")
+asciinema_re = re.compile(r"\[!\[asciicast\]\([^)]+\)\]\(https://asciinema\.org/a/([A-Za-z0-9_-]+)\)")
 
 
 

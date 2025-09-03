@@ -1,10 +1,9 @@
 import re
 
-# protège le code inline avant tout
 CODE_SPAN = re.compile(r'`([^`]+)`')
 
+# protège/restaure le code inline `...`
 def _protect_code_spans(text: str):
-    # remplace les `code` par des sentinelles pour éviter toute mise en forme
     buckets = []
     def hold(m):
         buckets.append(m.group(0))
@@ -16,43 +15,48 @@ def _restore_code_spans(text: str, buckets):
         text = text.replace(f"\uFFF0{i}\uFFF1", raw)
     return text
 
+# blocs à ignorer : lstlisting, verbatim, et lstinputlisting (une ligne)
+CODE_BLOCK_SPLIT = re.compile(
+    r'(\\begin{lstlisting}.*?\\end{lstlisting}'
+    r'|\\begin{verbatim}.*?\\end{verbatim}'
+    r'|\\lstinputlisting[^\n]*\{[^}]+\}[^\n]*\n?)',
+    flags=re.DOTALL
+)
+
 def process_links(md_text: str) -> str:
-    # [texte](url) → \href{url}{texte}
     return re.sub(r'\[([^\]]+)\]\(([^)]+)\)', r'\\href{\2}{\1}', md_text)
 
-def process_inline(md_text: str) -> str:
+def _process_inline_chunk(chunk: str) -> str:
     # 1) protéger les `code`
-    md_text, buckets = _protect_code_spans(md_text)
+    chunk, buckets = _protect_code_spans(chunk)
 
-    # 2) gras **bold** ou __bold__
-    md_text = re.sub(r'(?<!\\)(\*\*|__)(.+?)\1', r'\\textbf{\2}', md_text)
+    # 2) gras
+    chunk = re.sub(r'(?<!\\)(\*\*|__)(.+?)\1', r'\\textbf{\2}', chunk)
 
-    # 3) italique *em* ou _em_ :
-    #    - pas collé à une lettre/chiffre avant/après
-    #    - évite de matcher à l'intérieur d'identifiants (ex: nom_du_fichier)
+    # 3) italique (évite _dans_identifiants_)
     italic_re = re.compile(r'(?<!\\)(?<!\w)(\*|_)([^*_].*?)\1(?!\w)', re.DOTALL)
-    md_text = italic_re.sub(r'\\textit{\2}', md_text)
+    chunk = italic_re.sub(r'\\textit{\2}', chunk)
 
-    # 4) code inline `...` → \texttt{...} (on convertira après restauration)
-    #    (déjà protégé ; on s’occupe juste du cas hors backticks)
-    md_text = re.sub(r'`([^`]+)`', r'\\texttt{\1}', md_text)
+    # 4) placeholders <...> → \texttt{<...>} (HORS code seulement)
+    chunk = re.sub(r'<([A-Za-z0-9_./\-]+)>', r'\\texttt{<\1>}', chunk)
 
-    # 5) placeholders de type <nom_du_fichier> → \texttt<...>
-    #    (à faire APRÈS italique, pour éviter _du_ au milieu)
-    md_text = re.sub(r'<([A-Za-z0-9_./\-]+)>', r'\\texttt{<\1>}', md_text)
-
-    # 6) restaurer le code inline protégé, en le convertissant en \texttt{...}
-    def convert_tt(m):
-        inner = m.group(1)
-        return f'\\texttt{{{inner}}}'
-    # Remplace les backticks par \texttt lors de la restauration
+    # 5) restaurer les codes inline en \texttt{...}
     restored = []
     for raw in buckets:
         if raw.startswith('`') and raw.endswith('`'):
-            content = raw[1:-1]
-            restored.append(f'\\texttt{{{content}}}')
+            restored.append(f'\\texttt{{{raw[1:-1]}}}')
         else:
             restored.append(raw)
-    md_text = _restore_code_spans(md_text, restored)
+    chunk = _restore_code_spans(chunk, restored)
+    return chunk
 
-    return md_text
+def process_inline(md_text: str) -> str:
+    parts = CODE_BLOCK_SPLIT.split(md_text)
+    out = []
+    for i, part in enumerate(parts):
+        if i % 2 == 1:
+            # C'est un bloc code → on ne touche pas
+            out.append(part)
+        else:
+            out.append(_process_inline_chunk(part))
+    return ''.join(out)

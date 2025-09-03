@@ -14,6 +14,9 @@ def auto_indent_tex(file_path: Path) -> None:
     if exe:
         try:
             subprocess.run([exe, "-s", "-w", str(file_path)], check=True)
+            backup = file_path.with_suffix(".bak0")
+            if (backup.exists()):
+                backup.unlink()
             print(f"Auto-indent : {file_path}")
         except subprocess.CalledProcessError as e:
             print(f"⚠️ latexindent a échoué : {e}")
@@ -25,7 +28,10 @@ def auto_indent_tex(file_path: Path) -> None:
 def process_file(file_path: Path, output_dir: Path) -> Path:
     md_text = read_text(file_path)
     latex = process_file_content(md_text, output_dir)
-    out = output_dir / (file_path.stem + ".tex")
+    stem = file_path.stem
+    if stem == "_index":
+        stem = "00_index"
+    out = output_dir / (stem + ".tex")
     assert '\\\\item' not in latex, "Un \\ a été doublé quelque part."
     write_text(out, latex)
     auto_indent_tex(out)

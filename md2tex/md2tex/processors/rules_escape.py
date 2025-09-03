@@ -30,6 +30,8 @@ def escape_underscores(md_text: str) -> str:
             escaped = part.replace('_', r'\_')
             escaped = escaped.replace('%', r'\%')
             escaped = escaped.replace('#', r'\#')
+            escaped = escaped.replace('\<',r'<')
+            escaped = escaped.replace('\>',r'>')
             # On ne modifie pas < >, ils sont valides en LaTeX hors mode math
             escaped_parts.append(escaped)
     return ''.join(escaped_parts)
