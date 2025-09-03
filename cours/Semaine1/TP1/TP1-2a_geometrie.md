@@ -8,23 +8,27 @@ weight: 120
 # Parlons surface ! 
 ## Premier calculs : aires et périmètres
 
+> [!todo] Géométrie - Niveau1
+> - [ ] Rendez-vous dans le dossier `tp1/2_geometrie`
+> - [ ] Compléter le programme `rectangle.c` pour qu'il respecte le cahier des charges [Rectangle - Niveau 1](#aire-dun-rectangle)
+> - [ ] Compléter le programme `cercle.c` pour qu'il respecte le cahier des charges [Cercle - Niveau 1](#aire-et-périmètre-dun-cercle)
+
 ### Aire d'un rectangle
 > [!attention] Aire d'un rectangle
 > - Le programme doit demander la largueur et la longueur du rectangle
 > - Le programme calcule alors l'aire du rectangle. 
 >
->**Sortie attendue :**
->```bash
->Aire : <aire>
->```
-> avec \<aire\> L'aire du rectangle arrondie au centième.
+> **Sortie attendue :**
+> | Entrée 1 | Entrée 2 |  Affichage attendue | 
+> | --- | --- | --- |
+> | `<largeur>` | `<longueur>` | Aire : `<aire>` |  
+> Avec `<aire>` L'aire du rectangle **arrondie au centième**.
 > 
-> Exemples de tests : 
-> **Entrées :** `10`, `13`        
-> **Sortie attendue :** 
->```bash
->Aire : 130.00
->```
+> **Exemples de tests :**  
+> | Entrée 1 | Entrée 2 |  Affichage attendue | 
+> | --- | --- | --- |
+> | 10 | 13 | Aire : 130.00 | 
+> | 5.5 | 3 | Aire : 16.50 |
 >---
 > **Check :** 
 > ```
@@ -32,35 +36,27 @@ weight: 120
 > ```
 
 
-> [!todo] Rectangle - Niveau 1
-> - [ ] Rendez-vous dans le dossier `tp1/2_geometrie`
-> - [ ] Compléter le programme `rectangle.c` pour qu'il respecte le cahier des charges
 
 
 
 ### Aire et périmètre d'un cercle
 
-> [!todo] Cercle - Niveau 1
-> - [ ] Créer un fichier cercle.c qui répond au cahier des charges
-> - [ ] Tester 
-
 > [!attention] Cercle Niveau 1  
-> - Le programme doit demander le rayon du cercle
-> - Il doit ensuite produire l'affichage : 
-> ```
-> Aire : [aire]
-> Perimetre : [perimetre]
-> ```
+> - Le programme doit demander le rayon du cercle puis afficher l'aire et le périmètre. 
 > 
 > Avec [aire] et [perimetre] respectivement l'aire et le périmètre du cercle. 
 > 
-> Exemples de tests : 
-> **Entrées :** 10       
-> **Sortie attendue :** 
-> ```
-> Aire : 314.16
-> Perimetre : 62.83
-> ```
+> **Sortie attendue :**
+> | Entrée |   Affichage attendue | 
+> | --- |  --- |
+> | `<rayon>` |  Aire : `<aire>`<br>Périmètre : `<perimetre>` |  
+> Avec `<aire>` et `<perimetre>` **arrondis au centième**.
+> 
+> **Exemples de tests :**  
+> | Entrée 1 |   Affichage attendue | 
+> | --- |  --- |
+> | 10 |  Aire : 314.16 <br>Périmètre : 62.83 |
+>
 >  ---
 > **Check :** 
 > ```

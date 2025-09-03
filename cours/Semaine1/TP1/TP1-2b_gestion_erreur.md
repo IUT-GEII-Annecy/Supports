@@ -31,7 +31,3 @@ Tout le monde sait qu'une surface est toujours positive... Alors interdisons au 
 > [!todo] Valeurs négatives impossibles
 > - [ ] Compléter les programmes *cercle.c* et *rectangle.c* pour remplir le cahier des charges.
 > - [ ] Tester vos programmes à la main
-> - [ ] Lorsque tout fonctionne : Utiliser Submit50 pour soumettre les deux programmes. 
-> ```bash
-> submit50 IUT-GEII-Annecy/exercices/2025/info1/tp1/2_geometrie/geometrie/all
-> ``` 

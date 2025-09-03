@@ -6,9 +6,9 @@ draft: false
 weight: 1
 ---
 
-# TP 1 : Hello World
-## Objectif
-L'objectif de ce TP est faire vos premiers pas dans le monde de la programmation en langage C. Nous génèrerons un premier programme Hello World puis commencerons à jouer avec les variables. 
+Ce premier TP vous guide dans l'écriture de vos premiers programmes en langage C.  Les premiers sont très guidés puis les derniers vous demanderont plus de réflexion. 
+
+Chaque *cahier des charges* présenté dans ce TP est associé à une commande permettant de faire vérifier la validité de votre programme par l'ordinateur.
 
 
 

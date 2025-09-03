@@ -24,7 +24,7 @@ Exerçons-nous avec quelques conditions simple
 > - [ ] Le programme demande quel age a l'utilisateur 
 > - [ ] Le programme répond alors selon la logique suivante :
 > 	- [ ] Sinon, si l'utilisateur a strictement moins de 18 ans : `Vous êtes un mineur.`
-> 	- [ ] Sinon `Vous êtes un adulte`
+> 	- [ ] Sinon `Vous êtes un adulte.`
 >---
 >**Checks:**
 > ```
@@ -38,9 +38,9 @@ Exerçons-nous avec quelques conditions simple
 > - [ ] Le programme répond alors selon la logique suivante :
 > 	- [ ] Si l'utilisateur a strictement moins de 12 ans : `Vous êtes un enfant.`
 > 	- [ ] Sinon, si l'utilisateur a strictement moins de 18 ans : `Vous êtes un mineur.`
-> 	- [ ] Sinon, si l'utilisateur a strictement moins de 60 ans : `Vous êtes un adulte`
-> 	- [ ] Sinon, si l'utilisateur a strictement moins de 120 ans : `Vous êtes un sénior`
-> 	- [ ] Sinon : `Vous êtes un menteur`
+> 	- [ ] Sinon, si l'utilisateur a strictement moins de 60 ans : `Vous êtes un adulte.`
+> 	- [ ] Sinon, si l'utilisateur a strictement moins de 120 ans : `Vous êtes un sénior.`
+> 	- [ ] Sinon : `Vous êtes un menteur.`
 > 
 >---
 >**Checks:**

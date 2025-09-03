@@ -10,7 +10,8 @@ weight: 102
 
 ## Hello World en C    
 
-> [!todo] Écrire le programme Hello World se fait en trois étapes :
+> [!todo] Hello World
+> Trois étapes sont nécessaires pour créer un Hello World en langage C : 
 > 1. Inclure la bibliothèque standard d'entrée/sortie (`stdio.h`). -> Ecrire `#include <stdio.h>` en haut du fichier
 > 2. Définir la fonction principale `main`. -> `int main(void) { ... }`
 > 3. Utiliser la fonction `printf` à l'intérieur de la fonction main pour afficher le message.
@@ -30,12 +31,16 @@ int main(void)
 }
 ```
 
+> [!tip] Besoin d'aide ?
+> CS50 Duck Debugger est là pour vous aider ! 
+> Cliquer sur l'icône en forme de canard dans la colonne de gauche pour ouvrir l'extension.
+> Vous pouvez lui demander "En Français" à la fin de votre prompt pour obtenir de l'aide en français.  S'il vous dit qu'il ne parle qu'anglais, insistez, il finit souvent par abdiquer. 
+
+
+
 > [!todo] Compiler et exécuter le programme 
-> - [ ] Dans le terminal, assurez-vous d'être dans le dossier `TP1` où se trouve votre fichier `hello.c`. (Sinon, utilisez la commande `cd` pour naviguer jusqu'à ce dossier.
-> - [ ] Compiler le programme avec la commande `make hello`. Cette commande utilise le Makefile fourni par cs50 pour compiler le code C.    
+> - [ ] Dans le terminal, assurez-vous d'être dans le dossier `TP1/0_hello` (où se trouve votre fichier `hello.c` -- sinon, utilisez la commande `cd` pour naviguer jusqu'à ce dossier).
+> - [ ] Compiler le programme avec la commande `make hello`. 
 > - [ ] Exécuter le programme compilé avec la commande `./hello`. Vous devriez voir "Hello, World!" s'afficher dans le terminal.
-> ```bash
-> make hello
-> ./hello
-> ```
+> [![asciicast](https://asciinema.org/a/69XbpUL0KsVsH9V9FqBNHuNUf.svg)](https://asciinema.org/a/69XbpUL0KsVsH9V9FqBNHuNUf)
 > - Si vous voyez le message, félicitations ! Vous venez d'écrire   votre premier programme en C. **Dans le cas contraire, demandez de l'aide à l'enseignant, à vos camarades ou au CS50 Duck Debugger.**
