@@ -67,7 +67,7 @@ def escape_underscores(md_text):
         else:
             #escaped = part.replace('\n', r'\\n')   # d'abord les backslashes
             escaped = part.replace('_', r'\_')
-            escaped = part.replace('%',r'\%')
+            escaped = escaped.replace('%',r'\%')
             escaped = escaped.replace('#', r'\#')
             escaped = escaped.replace('\<',r'<')
             escaped = escaped.replace('\>',r'>')
