@@ -1,9 +1,9 @@
 ---
 title: TP 2 - Validateur de date
 description: On met en pratique 
-date: 2025-08-31
+date: 2025-09-10
 draft: false
-weight: 1
+weight: 11
 ---
 
 # Validateur de date - Prêt ? Feu.. Partez ! 

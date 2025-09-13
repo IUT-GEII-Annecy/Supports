@@ -1,7 +1,7 @@
 ---
 title: TP 2 - Séquences de contrôle - suite
 description: Ce TP explore la structure switch case
-date: 2025-08-31
+date: 2025-09-10
 draft: false
 weight: 1
 ---

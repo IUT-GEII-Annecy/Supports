@@ -1,9 +1,9 @@
 ---
 title: TP 2 - Un cas simple
 description: Quelques switch cases
-date: 2025-08-31
+date: 2025-09-10
 draft: false
-weight: 1
+weight: 10
 ---
 
 > [!important] Le type `char`
