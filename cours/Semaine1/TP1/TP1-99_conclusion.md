@@ -4,7 +4,7 @@
 > - [ ] Placer vous dans le dossier tp1
 > - [ ] Exécuter la commande suivante pour soummettre votre TP, pour en permettre le suivi. 
 > ```bash
-> submit50 IUT-GEII-Annecy/exercices/2025/info1/tp1/progression
+> submit50 IUT-GEII-Annecy/exercices/2025/info1/tp1/rendu
 > ```
 
 

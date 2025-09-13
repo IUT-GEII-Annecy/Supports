@@ -32,7 +32,7 @@ def process_file_content(md_text: str, output_dir: Path) -> str:
     md_text = process_inline(md_text)
     md_text = process_titles(md_text)
     md_text = process_horizontal_rules(md_text)
-    md_text = escape_underscores(md_text)
+    #md_text = escape_underscores(md_text)
     return md_text
 
 
